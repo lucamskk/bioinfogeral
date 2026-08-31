@@ -17,7 +17,7 @@ Ferramentas utilizadas neste pipeline (ajuste as versões conforme o que você u
 | `bwa` | `0.7.19` | Alinhamento |
 | `samtools` | `1.24` | Indexação/manipulação de BAM |
 
-##Download das READS
+## Download das READS
 
 > Fonte: SRR3943818
 ```bash
@@ -26,7 +26,7 @@ cd reads
 sudo apt update && sudo apt install -y sra-toolkit
 fastq-dump -X 100000 --split-files SRR3943818
 ```
-##Download do Genoma de Referência
+## Download do Genoma de Referência
 
 > Fonte: Ensembl Bacteria
 > Assembly utilizado: `ASM6978v1` (GCA_000069785.1 / GCF_000069785.1) — genoma completo de *C. taiwanensis* LMG 19424
@@ -65,3 +65,10 @@ samtools index alinhamento_ordenado.bam
 samtools flagstat alinhamento_ordenado.bam
 
 ```
+
+## Visualização no IGV
+
+Passos para carregar os dados no IGV:
+ 
+1. Abrir o IGV e carregar o genoma de referência (`Genomes > Load Genome from File`) usando `genome/<referencia>.fa`.
+2. Carregar o BAM indexado (`File > Load from File`) usando `alignment/aligned.sorted.bam`.
