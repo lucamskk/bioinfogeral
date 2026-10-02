@@ -1,0 +1,16 @@
+# Ignorar todo o ambiente pesado do RNA-Seq
+**/rna_seq_project/
+rna_seq_project/
+tarefa2/rna_seq_project/
+
+# Ignorar extensões pesadas
+*.fastq
+*.fastq.gz
+*.sam
+*.bam
+*.bai
+*.gtf
+*.tar.gz
+*.RData
+*.Rhistory
+.Rproj.user/
